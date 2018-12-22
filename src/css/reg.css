@@ -1,0 +1,241 @@
+#header {
+  box-sizing: border-box;
+  border-bottom: 2px solid #FE3F71;
+}
+
+#header .header {
+  height: 98px;
+  padding: 24px 0 0 97px;
+  box-sizing: border-box;
+}
+
+#header .header h1 a {
+  display: block;
+  background: url(../images/logo.gif) no-repeat;
+  height: 60px;
+  width: 187px;
+  text-indent: -999px;
+}
+
+#header .header span {
+  height: 35px;
+  width: 127px;
+  background: url(../images/reg_zhuce.png) no-repeat;
+  margin: 26px 0 0 2px;
+}
+
+#tbody .tbody {
+  box-sizing: border-box;
+  height: 660px;
+  padding: 0 270px;
+}
+
+#tbody .tbody_top p {
+  height: 92px;
+  text-align: center;
+  font-size: 12px;
+}
+
+#tbody .tbody_top p span {
+  font-size: 24px;
+  line-height: 92px;
+}
+
+#tbody .tbody_top p a {
+  color: #37A0DB;
+}
+
+#tbody .form ul li {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+#tbody .form ul li span {
+  display: inline-block;
+  width: 102px;
+  text-align: right;
+  color: #4D4D4D;
+}
+
+#tbody .form ul li input {
+  height: 40px;
+  width: 300px;
+  border: 1px solid #999999;
+  box-sizing: border-box;
+  padding: 0 10px;
+  font-size: 12px;
+  color: #999999;
+}
+
+#tbody .form ul li:nth-child(2) input {
+  width: 150px;
+}
+
+#tbody .form ul li:nth-child(2) input:nth-child(3) {
+  width: 146px;
+  border: none;
+  border-radius: 1px;
+  background: #FF8DAB;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+#tbody .form ul li:nth-child(3) input {
+  width: 200px;
+}
+
+#tbody .form ul li:nth-child(3) input:nth-child(3) {
+  width: 96px;
+  border: none;
+  border-radius: 1px;
+  background: #FF8DAB;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+#tbody .form ul li:nth-child(7) {
+  height: 42px;
+  font-size: 12px;
+  line-height: 42px;
+}
+
+#tbody .form ul li:nth-child(7) input {
+  width: 12px;
+  height: 12px;
+}
+
+#tbody .form ul li:nth-child(7) a {
+  color: #37A0DB;
+}
+
+#tbody .form ul li:nth-child(8) input {
+  background: #FE3F71;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+}
+
+#list .list ul li {
+  float: left;
+  padding-left: 66px;
+  width: 16.6%;
+  box-sizing: border-box;
+}
+
+#list .list ul li:nth-child(1) {
+  background: url(../images/footer.png) no-repeat -531px 0;
+}
+
+#list .list ul li:nth-child(2) {
+  background: url(../images/footer.png) no-repeat -709px 0;
+}
+
+#list .list ul li:nth-child(3) {
+  background: url(../images/footer.png) no-repeat -902px 0;
+}
+
+#list .list ul li:nth-child(4) {
+  background: url(../images/footer.png) no-repeat -1073px 0;
+}
+
+#list .list ul li:nth-child(5) {
+  background: url(../images/footer.png) no-repeat -1236px 0;
+}
+
+#list .list ul li:nth-child(6) {
+  background: url(../images/footer.png) no-repeat -1435px 0;
+}
+
+#list .list ul li h6 {
+  color: #666666;
+  font-size: 16px;
+  margin-bottom: 3px;
+  line-height: 30px;
+}
+
+#list .list ul li p {
+  font-size: 12px;
+  line-height: 22px;
+}
+
+#list .list ul li p a {
+  color: #999999;
+}
+
+#list .list ul li p a:hover {
+  color: orange;
+}
+
+#foot-s {
+  background: #3B87EE;
+  height: 70px;
+  box-sizing: border-box;
+  padding: 10px 0;
+  margin-top: 30px;
+}
+
+#foot-s .foot-s a {
+  display: inline-block;
+  margin-right: 46px;
+}
+
+#foot-s .foot-s a:nth-child(1) {
+  width: 326px;
+  height: 50px;
+  background: url(../images/footer.png) no-repeat;
+}
+
+#foot-s .foot-s a:nth-child(2) {
+  width: 450px;
+  height: 50px;
+  background: url(../images/footer.png) no-repeat 0 -46px;
+}
+
+#foot-s .foot-s a:nth-child(3) {
+  width: 274px;
+  height: 50px;
+  background: url(../images/footer.png) no-repeat 0 -90px;
+}
+
+#footer .footer {
+  text-align: center;
+  padding: 50px 0 14px;
+}
+
+#footer .footer p:nth-child(1) a {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 12px;
+  color: #999999;
+  padding: 0 5px;
+  border-right: 2px solid #999999;
+}
+
+#footer .footer p:nth-child(1) a:nth-child(6) {
+  border: none;
+}
+
+#footer .footer p:nth-child(1) a:hover {
+  color: orange;
+}
+
+#footer .footer p:nth-child(2) {
+  line-height: 36px;
+  font-size: 12px;
+  color: #999999;
+}
+
+#footer .footer p:nth-child(2) span {
+  padding: 0 3px;
+}
+
+#footer .footer p:nth-child(2) a {
+  display: inline-block;
+  color: #999999;
+  padding: 0 3px;
+}
+
+#footer .footer p:nth-child(2) a:hover {
+  color: orange;
+}
