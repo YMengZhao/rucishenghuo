@@ -35,9 +35,9 @@
                     position: rrelative;
                     &:hover {
                         color: orange;
-                        ul {
-                            display: block;
-                        }
+//                      ul {
+//                          display: block;
+//                      }
                     }
                     &:nth-child(2) {
                         padding: 0 6px;
@@ -211,7 +211,7 @@
                 border-radius: 0 0 4px 4px;
                 position: relative;
                 z-index: 8;
-//              display: none;
+                display: block;
                 >ul> {
                     li {
                         position: relative;
@@ -377,12 +377,43 @@
 
 #banner {
     .banner {
+        overflow:hidden;
         position: relative;
         z-index: 1;
         height: 476px;
-        img {
-            height: 476px;
-            width: 1200px;
+        .page{
+            position:absolute;
+            left:50%;
+            bottom:0;
+            padding:10px;
+            transform: translate(-50%,-50%);
+            span{
+                display:inline-block;
+                margin:0 5px;
+                width:20px;
+                height:20px;
+                line-height:20px;
+                background:rgba(0,0,0,.6);
+                text-align:center;
+                color:#fff;
+                border-radius: 50%;
+                box-shadow:0 0 10px rgba(0,0,0,.5);
+                
+            }
+            .active{
+                background: rgba(255,0,0,.8);
+            }
+        }
+        ul{
+            position:absolute;
+            li{
+                float:left;
+                img {
+                    display: block;
+                    height: 476px;
+                    width: 1200px;
+                }
+            }
         }
         .banner_list {
             background: #FFFFFF;

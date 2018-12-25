@@ -45,10 +45,6 @@
   color: orange;
 }
 
-#header .header .header_right > ul > li:hover ul {
-  display: block;
-}
-
 #header .header .header_right > ul > li:nth-child(2) {
   padding: 0 6px;
 }
@@ -239,6 +235,7 @@
   border-radius: 0 0 4px 4px;
   position: relative;
   z-index: 8;
+  display: block;
 }
 
 #nav .nav .nav_all .nav_all_list > ul > li {
@@ -423,12 +420,47 @@
 }
 
 #banner .banner {
+  overflow: hidden;
   position: relative;
   z-index: 1;
   height: 476px;
 }
 
-#banner .banner img {
+#banner .banner .page {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+}
+
+#banner .banner .page span {
+  display: inline-block;
+  margin: 0 5px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#banner .banner .page .active {
+  background: rgba(255, 0, 0, 0.8);
+}
+
+#banner .banner ul {
+  position: absolute;
+}
+
+#banner .banner ul li {
+  float: left;
+}
+
+#banner .banner ul li img {
+  display: block;
   height: 476px;
   width: 1200px;
 }

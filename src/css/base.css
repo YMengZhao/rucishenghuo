@@ -9,7 +9,9 @@ img {border:0; vertical-align:middle; }
 /*  去掉图片低测默认的3像素空白缝隙，或者用display：block也可以*/
 table { border-collapse:collapse; }
 a {text-decoration:none; }
-
+a:hover{
+	text-decoration: none;
+}
 
 
 /*2.添加公共样式*/
