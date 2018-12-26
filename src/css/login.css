@@ -68,7 +68,7 @@
   border: 1px solid #eee;
 }
 
-#tbody .tbody .tbody_content .tbody_content_middle form input:nth-child(6) {
+#tbody .tbody .tbody_content .tbody_content_middle form input:nth-child(7) {
   width: 310px;
   height: 40px;
   border: 0;
@@ -95,7 +95,7 @@
 }
 
 #tbody .tbody .tbody_content .tbody_content_middle form p {
-  margin-top: 37px;
+  margin-top: 10px;
   font-size: 12px;
 }
 

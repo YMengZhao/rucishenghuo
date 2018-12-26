@@ -43,15 +43,11 @@ body {
   border-right: 1px solid #B199B1;
   color: #37a0db;
   cursor: pointer;
-  position: rrelative;
+  position: relative;
 }
 
 #header .header .header_right > ul > li:hover {
   color: orange;
-}
-
-#header .header .header_right > ul > li:hover ul {
-  display: block;
 }
 
 #header .header .header_right > ul > li:nth-child(2) {
@@ -468,6 +464,7 @@ body {
 
 #list_head .list_head ul li {
   float: left;
+  cursor: pointer;
 }
 
 #list_head .list_head ul li a {
@@ -501,10 +498,55 @@ body {
   box-sizing: border-box;
   background: #fff;
   margin-right: 20px;
+  margin-top: 20px;
 }
 
 #con_list .con_list .conlist_all ul li:nth-child(5) {
-  margin: 0;
+  margin-right: 0;
+}
+
+#con_list .con_list .conlist_all ul li:nth-child(10) {
+  margin-right: 0;
+}
+
+#con_list .con_list .conlist_all ul li:nth-child(15) {
+  margin-right: 0;
+}
+
+#con_list .con_list .conlist_all ul li:nth-child(20) {
+  margin-right: 0;
+}
+
+#con_list .con_list .conlist_all ul li:nth-child(25) {
+  margin-right: 0;
+}
+
+#con_list .con_list .conlist_all ul li:nth-child(30) {
+  margin-right: 0;
+}
+
+#con_list .con_list .conlist_all ul li:nth-child(35) {
+  margin-right: 0;
+}
+
+#con_list .con_list .conlist_all ul li:nth-child(40) {
+  margin-right: 0;
+}
+
+#con_list .con_list .conlist_all ul li:nth-child(45) {
+  margin-right: 0;
+}
+
+#con_list .con_list .conlist_all ul li:nth-child(50) {
+  margin-right: 0;
+}
+
+#con_list .con_list .conlist_all ul li:nth-child(55) {
+  margin-right: 0;
+}
+
+#con_list .con_list .conlist_all ul li:nth-child(60) {
+  margin-right: 0;
 }
 
 #con_list .con_list .conlist_all ul li .conlist_all_logo {
@@ -619,6 +661,7 @@ body {
   float: left;
   border: 1px solid #ccc;
   margin-right: 5px;
+  cursor: pointer;
 }
 
 #con_list .con_list .conlist_pager ul li a {
@@ -632,36 +675,8 @@ body {
   text-decoration: none;
 }
 
-#con_list .con_list .conlist_pager ul li:nth-child(5) {
-  border: 0;
-  margin-top: 5px;
-}
-
-#con_list .con_list .conlist_pager ul li:nth-child(10) input {
-  width: 35px;
-  height: 32px;
-  box-sizing: border-box;
-  padding: 0 10px;
-}
-
-#con_list .con_list .conlist_pager ul li:nth-child(9), #con_list .con_list .conlist_pager ul li:nth-child(11) {
-  border: 0;
-  font-size: 12px;
-  line-height: 32px;
-}
-
-#con_list .con_list .conlist_pager ul li:nth-child(12) {
-  border: 0 none;
-}
-
-#con_list .con_list .conlist_pager ul li:nth-child(12) input {
-  padding: 0 10px;
-  height: 32px;
-  box-sizing: border-box;
-  background: #37a0db;
-  font-size: 12px;
-  line-height: 32px;
-  color: #fff;
+#con_list .con_list .conlist_pager ul li:nth-child(1) {
+  background: orange;
 }
 
 #con_list .con_list .conlist_pager ul li:hover {

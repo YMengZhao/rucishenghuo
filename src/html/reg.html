@@ -30,28 +30,28 @@
 									<span>校验码:</span>
 									<input type="text" value="" placeholder="请输入验证码" class="yzm"/>
 									<input type="button"  value="获取验证码" class="hqyzm"/>
-									<span style="width: 50px;"></span>
+									<span class="tag2" style="width: 50px;opacity: 0;"><img src="../images/error_tag.png"/></span>
 								</li>
 								<li>
-									<span>验证码:</span>
-									<input type="text" value=""/>
+										<span>验证码:</span>
+									<input type="text" value="" disabled/>
 									<input type="button"  value="获取验证码" />
 									<span style="width: 50px;"></span>
 								</li>
 								<li>
 									<span>密码:</span>
-									<input type="password" value="" placeholder="输入密码"/>
-									<span style="width: 50px;"></span>
+									<input type="password" value="" placeholder="输入密码" id="pass1"/>
+									<span class="tag4" style="width: 50px;opacity: 0;"><img src="../images/error_tag.png"/></span>
 								</li>
 								<li>
 									<span>确认密码:</span>
-									<input type="password" value="" placeholder="再次确认密码" />
-									<span style="width: 50px;"></span>
+									<input type="password" value="" placeholder="再次确认密码" id="pass2"/>
+									<span class="tag5" style="width: 50px;opacity: 0;"><img src="../images/error_tag.png"/></span>
 								</li>
-								<li></li>
+								<li style="color: red;font-size: 12px;" class="tips"></li>
 								<li>
 									<span></span>
-									<input type="checkbox" checked /> 我已经认真阅读并同意
+									<input type="checkbox" checked  class="yhxy"/> 我已经认真阅读并同意
 									<a href="#">《用户注册协议》</a>
 									<span style="width: 50px;"></span>
 								</li>	

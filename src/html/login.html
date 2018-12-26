@@ -5,6 +5,7 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+		<script type="text/javascript" src="../js/require.js" data-main = "../js/login.js"></script>
 	</head>
 	<body>
 		<div id="header">
@@ -20,15 +21,16 @@
 					<img src="../images/iconfont-erweima-(2).png" alt="" class="erweima"/>
 					<div class="tbody_content_middle">
 						<form>
-							<input type="text" value="" placeholder="手机/邮箱/用户名"/>
+							<input type="text" value="" placeholder="手机/邮箱/用户名" class="number"/>
 							<img src="../images/entertext_0.png" alt="" />
-							<input type="password" value="" placeholder="密码"/>
+							<input type="password" value="" placeholder="密码" class="pass"/>
 							<img src="../images/enterpasword_0.png" alt="" />
+							<p style="text-align: center;color: red; height: 16px;" class="tips"></p>
 							<p>
 								<input type="checkbox"/>记住用户名
 								<a href="#">忘记密码</a>
 							</p>
-							<input type="button"value="登 录" />
+							<input type="button"value="登 录" class="dlbtn"/>
 							<span>
 								没有账号？30S快速
 								<a href="reg.html" class="zhuce">注册</a>

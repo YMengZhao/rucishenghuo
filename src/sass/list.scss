@@ -35,12 +35,9 @@ body{
                     border-right: 1px solid #B199B1;
                     color: #37a0db;
                     cursor: pointer;
-                    position: rrelative;
+                    position: relative;
                     &:hover {
                         color: orange;
-                        ul {
-                            display: block;
-                        }
                     }
                     &:nth-child(2) {
                         padding: 0 6px;
@@ -414,6 +411,7 @@ body{
             width: 50%;
             li{
                 float: left;
+                cursor: pointer;
                 a{
                     text-align: center;
                     width: 80px;
@@ -447,8 +445,42 @@ body{
                     box-sizing: border-box;
                     background: #fff;
                     margin-right: 20px;
+                    margin-top: 20px;
                     &:nth-child(5){
-                        margin: 0;
+                        margin-right: 0;
+                    }
+                    &:nth-child(10){
+                        margin-right: 0;
+                    }
+                    &:nth-child(15){
+                        margin-right: 0;
+                    }
+                    &:nth-child(20){
+                        margin-right: 0;
+                    }
+                    &:nth-child(25){
+                        margin-right: 0;
+                    }
+                    &:nth-child(30){
+                        margin-right: 0;
+                    }
+                    &:nth-child(35){
+                        margin-right: 0;
+                    }
+                    &:nth-child(40){
+                        margin-right: 0;
+                    }
+                    &:nth-child(45){
+                        margin-right: 0;
+                    }
+                    &:nth-child(50){
+                        margin-right: 0;
+                    }
+                    &:nth-child(55){
+                        margin-right: 0;
+                    }
+                    &:nth-child(60){
+                        margin-right: 0;
                     }
                     .conlist_all_logo{
                         text-align: center;
@@ -547,6 +579,7 @@ body{
                     float: left;
                     border: 1px solid #ccc;
                     margin-right: 5px;
+                    cursor:pointer;
                     a{
                         display: block;
                         font-size: 12px;
@@ -556,35 +589,38 @@ body{
                             text-decoration: none;
                         }
                     }
-                    &:nth-child(5){
-                        border: 0;
-                        margin-top: 5px;
+                    &:nth-child(1){
+                        background: orange;
                     }
-                    &:nth-child(10){
-                        input{
-                            width: 35px;
-                            height: 32px;
-                            box-sizing: border-box;
-                            padding: 0 10px;
-                        }
-                    }
-                    &:nth-child(9),&:nth-child(11){
-                        border: 0;
-                        font-size: 12px;
-                        line-height: 32px;
-                    }
-                    &:nth-child(12){
-                        border: 0 none;
-                        input{
-                            padding: 0 10px;
-                            height: 32px;
-                            box-sizing: border-box;
-                            background: #37a0db;
-                            font-size: 12px;
-                            line-height: 32px;
-                            color: #fff;
-                        }
-                    }
+//                  &:nth-child(5){
+//                      border: 0;
+//                      margin-top: 5px;
+//                  }
+//                  &:nth-child(10){
+//                      input{
+//                          width: 35px;
+//                          height: 32px;
+//                          box-sizing: border-box;
+//                          padding: 0 10px;
+//                      }
+//                  }
+//                  &:nth-child(9),&:nth-child(11){
+//                      border: 0;
+//                      font-size: 12px;
+//                      line-height: 32px;
+//                  }
+//                  &:nth-child(12){
+//                      border: 0 none;
+//                      input{
+//                          padding: 0 10px;
+//                          height: 32px;
+//                          box-sizing: border-box;
+//                          background: #37a0db;
+//                          font-size: 12px;
+//                          line-height: 32px;
+//                          color: #fff;
+//                      }
+//                  }
                     &:hover{
                         border-color: orange;
                     }
