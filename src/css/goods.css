@@ -45,10 +45,6 @@
   color: orange;
 }
 
-#header .header .header_right > ul > li:hover ul {
-  display: block;
-}
-
 #header .header .header_right > ul > li:nth-child(2) {
   padding: 0 6px;
 }
@@ -434,13 +430,27 @@
 }
 
 #details .details .details_left {
-  padding-top: 15px;
+  position: relative;
   float: left;
   width: 400px;
+  padding: 15px 15px 0 15px;
   border-right: 1px solid #F5F5F5;
 }
 
+#details .details .details_left .bigimg {
+  position: absolute;
+  width: 370px;
+  height: 370px;
+  border: 1px solid #CCCCCC;
+  left: 400px;
+  top: 15px;
+  z-index: 9;
+  display: none;
+  overflow: hidden;
+}
+
 #details .details .details_left .details_left_tu {
+  position: relative;
   text-align: center;
   margin-bottom: 37px;
 }
@@ -448,6 +458,14 @@
 #details .details .details_left .details_left_tu img {
   width: 370px;
   height: 370px;
+}
+
+#details .details .details_left .details_left_tu span {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #ccc;
 }
 
 #details .details .details_left .details_left_banner span {
@@ -546,7 +564,7 @@
 }
 
 #details .details .details_center .details_center_price .price {
-  width: 160px;
+  width: 300px;
 }
 
 #details .details .details_center .details_center_price .price span:nth-child(1) {
@@ -673,6 +691,8 @@
 }
 
 #details .details .details_center .details_center_bottom ul li:nth-child(5) p > span {
+  cursor: pointer;
+  user-select: none;
   text-align: center;
   display: inline-block;
   width: 26px;
@@ -699,9 +719,11 @@
 #details .details .details_center .details_center_bottom .details_center_bottom_button {
   padding-left: 20px;
   padding-bottom: 76px;
+  position: relative;
 }
 
 #details .details .details_center .details_center_bottom .details_center_bottom_button a {
+  user-select: none;
   display: inline-block;
   font-size: 12px;
   padding: 0 5px;
@@ -1044,4 +1066,15 @@
   font-size: 12px;
   line-height: 56px;
   color: #666666;
+}
+
+.cloneImg {
+  height: 70px;
+  width: 70px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  border: 2px solid orange;
+  border-radius: 50%;
+  z-index: 13;
 }

@@ -18,8 +18,10 @@ require(["../lib/jquery-3.3.1.js", "../js/common.js"], function() {
 						if(res == "账号错误"){
 							$(".tips").html("账号或密码错误！")
 						}else if(res == "正确"){
+							//把账号名存进cookie
+							Cookie.setCookie("username",JSON.stringify($(".number").val()),"","/");
 							alert("登录成功")
-							location.href = "../index.html"
+							location.href = `../index.html`
 						}
 					}
 				})

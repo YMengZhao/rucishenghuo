@@ -4,6 +4,8 @@
 	$currentPage = isset($_GET["currentPage"])?$_GET["currentPage"]:1;
 	$jiage = isset($_GET["jiage"])?$_GET["jiage"]:null;
 	$xiaoliang= isset($_GET["xiaoliang"])?$_GET["xiaoliang"]:null;
+	$renqi= isset($_GET["renqi"])?$_GET["renqi"]:null;
+	$shijian= isset($_GET["shijian"])?$_GET["shijian"]:null;
 	
     $servername = "localhost";
     $username = "root";
@@ -26,7 +28,18 @@
 			$res2 = $conn -> query('select * from goodslist order by sales desc');
 		}else if($xiaoliang == "false"){
 			$res2 = $conn -> query('select * from goodslist order by sales asc');
+		}else if($renqi == "true"){
+			$res2 = $conn -> query('select * from goodslist order by hot desc');
+		}else if($renqi == "false"){
+			$res2 = $conn -> query('select * from goodslist order by hot asc');
+		}else if($shijian == "true"){
+			$res2 = $conn -> query('select * from goodslist order by settime desc');
+		}else if($shijian == "false"){
+			$res2 = $conn -> query('select * from goodslist order by settime asc');
+		}else{
+			$res2 = $conn -> query('select * from goodslist order by id asc');
 		}
+		
 		
 		
         $content2 = $res2->fetch_all(MYSQLI_ASSOC);   

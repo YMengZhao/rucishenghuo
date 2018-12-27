@@ -396,6 +396,7 @@ body{
         }
     }
 }
+
 #list_head{
     .list_head{
         background: #FFF;
@@ -470,22 +471,11 @@ body{
                     &:nth-child(40){
                         margin-right: 0;
                     }
-                    &:nth-child(45){
-                        margin-right: 0;
-                    }
-                    &:nth-child(50){
-                        margin-right: 0;
-                    }
-                    &:nth-child(55){
-                        margin-right: 0;
-                    }
-                    &:nth-child(60){
-                        margin-right: 0;
-                    }
                     .conlist_all_logo{
                         text-align: center;
                         img{
                             width: 200px;
+                            cursor:pointer;
                         } 
                     }
                     .conlist_all_img{
@@ -494,6 +484,7 @@ body{
                         width: 32px;
                         img{
                             width: 30px;
+                            cursor:pointer;
                         }
                     }
                     .list_name1{
@@ -979,3 +970,4 @@ body{
         }
     }
 }
+

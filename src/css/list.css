@@ -533,28 +533,13 @@ body {
   margin-right: 0;
 }
 
-#con_list .con_list .conlist_all ul li:nth-child(45) {
-  margin-right: 0;
-}
-
-#con_list .con_list .conlist_all ul li:nth-child(50) {
-  margin-right: 0;
-}
-
-#con_list .con_list .conlist_all ul li:nth-child(55) {
-  margin-right: 0;
-}
-
-#con_list .con_list .conlist_all ul li:nth-child(60) {
-  margin-right: 0;
-}
-
 #con_list .con_list .conlist_all ul li .conlist_all_logo {
   text-align: center;
 }
 
 #con_list .con_list .conlist_all ul li .conlist_all_logo img {
   width: 200px;
+  cursor: pointer;
 }
 
 #con_list .con_list .conlist_all ul li .conlist_all_img {
@@ -565,6 +550,7 @@ body {
 
 #con_list .con_list .conlist_all ul li .conlist_all_img img {
   width: 30px;
+  cursor: pointer;
 }
 
 #con_list .con_list .conlist_all ul li .list_name1 {

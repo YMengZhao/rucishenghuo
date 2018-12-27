@@ -35,9 +35,6 @@
                     position: rrelative;
                     &:hover {
                         color: orange;
-                        ul {
-                            display: block;
-                        }
                     }
                     &:nth-child(2) {
                         padding: 0 6px;
@@ -397,16 +394,37 @@
     .details{
         background: #FFFFFF;
         .details_left{
-            padding-top: 15px;
+            position: relative;
             float: left;
             width: 400px;
+            padding: 15px 15px 0 15px;
             border-right:1px solid #F5F5F5 ;
+            .bigimg{
+                position: absolute;
+                width: 370px;
+                height: 370px;
+                border: 1px solid #CCCCCC;
+                left: 400px;
+                top: 15px;
+                z-index: 9;
+                display:none;
+                overflow: hidden;
+            }
             .details_left_tu{
+                position: relative;
                 text-align: center;
                 margin-bottom: 37px;
                 img{
                     width: 370px;
                     height: 370px;
+                }
+                span{
+                    
+                    display:none;
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    border:1px solid #ccc;
                 }
             }
             .details_left_banner{
@@ -494,7 +512,7 @@
                 background: #F7F7F7;
                 padding-left: 9px;
                 .price{
-                    width: 160px;
+                    width: 300px;
                     span{
                         &:nth-child(1){
                             color: #c00;
@@ -624,6 +642,8 @@
                                 vertical-align: middle;
                                 position: relative;
                                 >span{
+                                    cursor:pointer;
+                                    user-select:none;
                                     text-align: center;
                                     display: inline-block;
                                     width: 26px;
@@ -652,7 +672,9 @@
                 .details_center_bottom_button{
                     padding-left: 20px;
                     padding-bottom: 76px;
+                    position: relative;
                     a{
+                        user-select: none;
                         display: inline-block;
                         font-size: 12px;
                         padding: 0 5px;
@@ -944,4 +966,14 @@
             }
         }
     }
+}
+.cloneImg{
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    border: 2px solid orange;
+    border-radius:50% ;
+    z-index: 13;
 }

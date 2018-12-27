@@ -419,6 +419,10 @@
   color: #ff3f72;
 }
 
+#banner {
+  overflow: hidden;
+}
+
 #banner .banner {
   overflow: hidden;
   position: relative;
