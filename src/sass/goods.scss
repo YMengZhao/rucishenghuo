@@ -419,12 +419,14 @@
                     height: 370px;
                 }
                 span{
-                    
                     display:none;
                     position:absolute;
                     top:0;
                     left:0;
                     border:1px solid #ccc;
+                    background: #FFFFFF;
+                    opacity: 0.5;
+                    cursor: crosshair;
                 }
             }
             .details_left_banner{
@@ -976,4 +978,5 @@
     border: 2px solid orange;
     border-radius:50% ;
     z-index: 13;
+    opacity: 1;
 }

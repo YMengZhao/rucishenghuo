@@ -10,7 +10,7 @@
         var_dump($conn->connect_error);
     }
     $conn->set_charset('utf8');
- 
+ 	//查询商品
     $res2 = $conn -> query('select * from goodslist where id='.$id);
     if($res2->num_rows > 0){
         $content2 = $res2->fetch_all(MYSQLI_ASSOC);
@@ -19,6 +19,8 @@
     }else{ 
         echo "没有满足条件的数据";
     }
+    
+
     $res2->close();
     $conn->close();
 ?>

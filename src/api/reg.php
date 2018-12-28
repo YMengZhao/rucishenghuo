@@ -18,7 +18,6 @@
     if($res->num_rows > 0){
         echo "已被注册";
     }else{
-    	
         if($register){
             $res = $conn->query('insert into user (name,pass) values ('.$name.','.$pass.')');
             if($res){
