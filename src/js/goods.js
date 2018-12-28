@@ -81,7 +81,7 @@ require(["../lib/jquery-3.3.1.js", "../js/common.js", "../js/base.js"], function
 						success: (res3) => {
 							$.ajax({
 								type: 'GET',
-								url: "../api/car.php",
+								url: "../api/goodscar.php",
 								data: {
 									name: name,
 									num: $num,
