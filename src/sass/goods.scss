@@ -431,6 +431,7 @@
             }
             .details_left_banner{
                 span{
+                    cursor:pointer;
                     font-size: 22px;
                     color: #F6AB00;
                     padding: 0 5px;
@@ -438,10 +439,12 @@
                 }
                 ul{
                     li{
+                        cursor:pointer;
                         float: left;
                         width: 60px;
                         height: 60px;
-                        border: 1px solid #FFFFFF;
+                        border: 1px solid #CCCCCC;
+                        margin-right: 10px;
                         img{
                             width: 58px;
                             height: 58px;
@@ -556,6 +559,7 @@
                     margin-bottom: 5px;
                     li{
                         span{
+                            cursor:pointer;
                             &:nth-child(1){
                                 font-size: 12px; 
                                 padding-right:20px;

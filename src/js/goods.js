@@ -23,7 +23,6 @@ require(["../lib/jquery-3.3.1.js", "../js/common.js", "../js/base.js"], function
 				goodRendering(res);
 				var $num;
 				getNumber();
-				
 				addToCart(res);
 				fandajing(res);
 			}
@@ -158,18 +157,39 @@ require(["../lib/jquery-3.3.1.js", "../js/common.js", "../js/base.js"], function
 				})
 			})
 			//进入页面渲染侧边购物车
-			//获取商品cookie
-			var goodsCarList = Cookie.getCookie("goodsCarList") || [];
-			if(typeof goodsCarList == "string") {
-				goodsCarList = JSON.parse(goodsCarList);
+			//获取账户名
+			if(name != "") {
+				$.ajax({
+					type: 'GET',
+					url: "../api/car.php",
+					data: {
+						name: name
+					},
+					success: (res) => {
+						var res = JSON.parse(res);
+						//获取商品总数
+						var $allnum = 0;
+						res.map(function(item) {
+							$allnum += parseInt(item.num);
+						})
+						//渲染侧边购物车
+						$(".carAllNum").html($allnum);
+					}
+				})
+			} else {
+				//获取商品cookie
+				var goodsCarList = Cookie.getCookie("goodsCarList") || [];
+				if(typeof goodsCarList == "string") {
+					goodsCarList = JSON.parse(goodsCarList);
+				}
+				//获取商品总数
+				var $allnum = 0;
+				goodsCarList.map(function(item) {
+					$allnum += item.num;
+				})
+				//渲染侧边购物车
+				$(".carAllNum").html($allnum);
 			}
-			//获取商品总数
-			var $allnum = 0;
-			goodsCarList.map(function(item) {
-				$allnum += item.num;
-			})
-			//渲染侧边购物车
-			$(".carAllNum").html($allnum);
 		}
 
 		//放大镜
@@ -214,6 +234,22 @@ require(["../lib/jquery-3.3.1.js", "../js/common.js", "../js/base.js"], function
 				});
 			})
 		}
-
+		
+		//点击边框变色
+		$(".goodscolor").on("click",".si",function(){
+			$(".goodscolor .si").css("border-color","#E8E8E8")
+			$(this).css("border-color","orange")
+		})
+		$(".goodsSize").on("click",".ss",function(){
+			$(".goodsSize .ss").css("border-color","#E8E8E8")
+			$(this).css("border-color","orange")
+		})
+		$(".details_left_banner").on("click","ul li",function(){
+			$(".details_left_banner ul li").css("border-color","#ccc")
+			$(this).css("border-color","#0068B6")
+			var $imgg =  $(this).find("img").prop("src");
+			$(".details_left_tu").find("img").prop("src",$imgg);
+		})
+		
 	})
 })

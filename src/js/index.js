@@ -83,6 +83,72 @@ require(["lib/jquery-3.3.1.js", "js/common.js", "js/base.js"], function() {
 		$obj.show();
 
 		setNameIndex();
-
+		//进入页面渲染侧边购物车
+		//获取账户名
+		var name = Cookie.getCookie("username") || [];
+		if(typeof name == "string") {
+			name = JSON.parse(name);
+		}
+		if(name != ""){
+			$.ajax({
+				type: 'GET',
+				url: "api/car.php",
+				data: {
+					name: name
+				},
+				success: (res) => {
+					var res = JSON.parse(res);
+					//获取商品总数
+					var $allnum = 0;
+					res.map(function(item) {
+						$allnum += parseInt(item.num);
+					})
+					//渲染侧边购物车
+					$(".carAllNum").html($allnum);
+				}
+			})
+		}else{
+			//获取商品cookie
+			var goodsCarList = Cookie.getCookie("goodsCarList") || [];
+			if(typeof goodsCarList == "string") {
+				goodsCarList = JSON.parse(goodsCarList);
+			}
+			//获取商品总数
+			var $allnum = 0;
+			goodsCarList.map(function(item) {
+				$allnum += item.num;
+			})
+			//渲染侧边购物车
+			$(".carAllNum").html($allnum);			
+		}
+		//猜你喜欢
+		$.ajax({
+			type: 'GET',
+			url: "api/list.php",
+			data: {
+				qty: 5,
+				currentPage: 1,
+				xiaoliang: true
+			},
+			success: (res) => {
+				var res = JSON.parse(res);
+				var $html = res.data.map(function(item){
+					return `<div class="llc_item">
+						<div class="llc_item_logo">
+							<a><img src="${item.imgurl.slice(3)}"/></a>
+						</div>
+						<div class="llc_item_name">
+							<p><a href="html/goods.html?id=${item.id}">${item.goodsname}</a></p>
+							<p>¥ ${item.oPrice}</p>
+						</div>
+						<div class="llc_item_button">
+							<a href="html/goods.html?id=${item.id}">我要购买</a>
+						</div>
+					</div>`
+				}).join("");
+				$(".like_list_content").html($html);
+			}
+		})
+		
 	})
 })

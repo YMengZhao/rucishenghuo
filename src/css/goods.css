@@ -472,6 +472,7 @@
 }
 
 #details .details .details_left .details_left_banner span {
+  cursor: pointer;
   font-size: 22px;
   color: #F6AB00;
   padding: 0 5px;
@@ -479,10 +480,12 @@
 }
 
 #details .details .details_left .details_left_banner ul li {
+  cursor: pointer;
   float: left;
   width: 60px;
   height: 60px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #CCCCCC;
+  margin-right: 10px;
 }
 
 #details .details .details_left .details_left_banner ul li img {
@@ -607,6 +610,10 @@
 #details .details .details_center .details_center_bottom ul {
   padding-left: 20px;
   margin-bottom: 5px;
+}
+
+#details .details .details_center .details_center_bottom ul li span {
+  cursor: pointer;
 }
 
 #details .details .details_center .details_center_bottom ul li span:nth-child(1) {

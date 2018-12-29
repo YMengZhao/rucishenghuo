@@ -262,5 +262,46 @@ require(["../lib/jquery-3.3.1.js", "../js/common.js", "../js/base.js"], function
 
 		//获取账号名
 		setName();
+
+		//进入页面渲染侧边购物车
+		//获取账户名
+		var name = Cookie.getCookie("username") || [];
+		if(typeof name == "string") {
+			name = JSON.parse(name);
+		}
+		console.log(name)
+		if(name != "") {
+			$.ajax({
+				type: 'GET',
+				url: "../api/car.php",
+				data: {
+					name: name
+				},
+				success: (res) => {
+					var res = JSON.parse(res);
+					//获取商品总数
+					var $allnum = 0;
+					res.map(function(item) {
+						$allnum += parseInt(item.num);
+					})
+					//渲染侧边购物车
+					$(".carAllNum").html($allnum);
+				}
+			})
+		} else {
+			//获取商品cookie
+			var goodsCarList = Cookie.getCookie("goodsCarList") || [];
+			if(typeof goodsCarList == "string") {
+				goodsCarList = JSON.parse(goodsCarList);
+			}
+			//获取商品总数
+			var $allnum = 0;
+			goodsCarList.map(function(item) {
+				$allnum += item.num;
+			})
+			//渲染侧边购物车
+			$(".carAllNum").html($allnum);
+		}
+		
 	})
 })

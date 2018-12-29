@@ -81,6 +81,8 @@ require(["../lib/jquery-3.3.1.js", "../js/common.js", "../js/base.js"], function
 							}
 						})
 					})
+
+					//删除
 					$(".car_detailsUl").on("click", "i", function() {
 						var i;
 						var $liid = $(this).parents("li").eq(1).data("id");
@@ -163,6 +165,9 @@ require(["../lib/jquery-3.3.1.js", "../js/common.js", "../js/base.js"], function
 					}
 
 				}
+			})
+			$(".settlement").on("click",function(){
+				alert("购买成功");
 			})
 		} else {
 			render();
@@ -377,8 +382,12 @@ require(["../lib/jquery-3.3.1.js", "../js/common.js", "../js/base.js"], function
 				$(".allnum").html(`${$allnum}`);
 				$(".allprice").html(`${$allprice}`);
 			}
+			$(".settlement").on("click",function(){
+				location.href = "../html/login.html"
+			})
 		}
-		//全选
+		
+		//全选、反选
 
 		$(".checktop").on("click", function() {
 			$(":checkbox").prop("checked", this.checked);
@@ -388,7 +397,49 @@ require(["../lib/jquery-3.3.1.js", "../js/common.js", "../js/base.js"], function
 		})
 		$(".car_detailsUl").on("click", ":checkbox", function() {
 			$(this).parents(".car_detailsLi").find(":checkbox").not($(this)).prop("checked", this.checked);
+			isAll();
 		})
 
+		function isAll() {
+			var $checkedLen = $(".car_details :checked").length;
+			var $checkboxLen = $(".car_details :checkbox").length;
+			if($checkedLen == $checkboxLen) {
+				$(".checktop").prop("checked", true);
+				$(".checkbottom").prop("checked", true);
+			} else {
+				$(".checktop").prop("checked", false);
+				$(".checkbottom").prop("checked", false);
+			}
+		}
+		
+		//猜你喜欢
+		$.ajax({
+			type: 'GET',
+			url: "../api/list.php",
+			data: {
+				qty: 4,
+				currentPage: 1,
+				xiaoliang: true
+			},
+			success: (res) => {
+				var res = JSON.parse(res);
+				var $html = res.data.map(function(item){
+					return `<li>
+							<div class="bottom_img">
+								<img src="${item.imgurl}"/>
+							</div>
+							<p><a href="../html/goods.html?id=${item.id}">${item.goodsname}</a></p>
+							<div class="bottom_sp">
+								￥
+								<span>${item.oPrice}</span>
+							</div>
+							<div class="bottom_bt">
+								<a href="../html/goods.html?id=${item.id}"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+							</div>
+						</li>`
+				}).join("");
+				$(".recommend_bottomUl").html($html);
+			}
+		})
 	})
 })
