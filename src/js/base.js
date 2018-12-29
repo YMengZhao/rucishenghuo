@@ -36,7 +36,8 @@ function setNameIndex() {
 		var Account = `<label>Hi,${name}</label>
 							<a class="quit"> 退出 </a><em>|</em>
 							<a title="关注如此生活 官方微信" href=""><img src="images/b_3.png" /></a>
-							<a title="关注如此生活 官方微博" href=""><img src="images/b_2.png" /></a>`
+							<a title="关注如此生活 官方微博" href=""><img src="images/b_2.png" /></a>
+							<a href="html/reg.html"> 注册 </a>`
 		$(".header_left").html(Account);
 		$(".si_login").find("span").html(`Hi,${name}`);
 		//点击退出，退出登录
@@ -62,7 +63,8 @@ function setName() {
 		var Account = `<label>Hi,${name}</label>
 							<a class="quit"> 退出 </a><em>|</em>
 							<a title="关注如此生活 官方微信" href=""><img src="../images/b_3.png" /></a>
-							<a title="关注如此生活 官方微博" href=""><img src="../images/b_2.png" /></a>`
+							<a title="关注如此生活 官方微博" href=""><img src="../images/b_2.png" /></a>
+							<a href="../html/reg.html"> 注册 </a>`
 		$(".header_left").html(Account);
 		$(".si_login").find("span").html(`Hi,${name}`);
 		//点击退出，退出登录

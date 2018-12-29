@@ -24,3 +24,50 @@ gulp.task("compileSass",function(){
 gulp.task("jt",function(){
     gulp.watch("./src/sass/*.scss",gulp.series("compileSass"))
 })
+ // 任务3：压缩html
+// gulp.task('minify', () => {
+//   return gulp.src('src/**/*.html')
+//     .pipe(htmlmin({ collapseWhitespace: true }))
+//     .pipe(gulp.dest('dist/'));
+// });
+
+// 任务4：合并js
+   var concat = require('gulp-concat');
+   gulp.task('scripts', function() {
+     return gulp.src('./src/js/*.js')
+       .pipe(concat('all.js'))
+       .pipe(gulp.dest('./dist/js/'));
+   });
+
+// 任务5：压缩js
+   var uglify = require('gulp-uglify');
+   var pump = require('pump');
+   gulp.task('compress', function () {
+       pump([
+           gulp.src('./dist/js/all.js'),
+           uglify(),
+           gulp.dest('dist/js/')
+       ],
+
+     );
+   });
+
+// all.js====>all.min.js
+// 任务5：合并js、压缩js、改名字min.js
+//var concat = require('gulp-concat');
+//var uglify = require('gulp-uglify');
+//var pump = require('pump');
+//var rename = require("gulp-rename");
+//
+//gulp.task('jsmin', function () {
+//  pump([
+//      gulp.src('./src/js/*.js'),
+//      concat('all.js'),
+//      gulp.dest('./dist/js/'),
+//      
+//      uglify(),
+//      // // 改名字
+//      rename({suffix: ".min"}),
+//      gulp.dest('dist/js/')
+//  ]);
+//});
