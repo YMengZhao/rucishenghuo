@@ -15,8 +15,9 @@ require(["../lib/jquery-3.3.1.js", "../js/common.js"], function() {
 						register: "true"
 					},
 					success: (res) => {
-						if(res == "账号错误") {
+						if(res == "错误") {
 							$(".tips").html("账号或密码错误！")
+							
 						} else if(res == "正确") {
 							//把账号名存进cookie							
 							if($(":checkbox").prop("checked") == false) {
